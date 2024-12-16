@@ -1,0 +1,148 @@
+:root {
+  --nav-bar-color: #283458;
+  --free-bg-color: #0d6efd;
+  --text-color: #fff;
+  --active-color: #5cd2ff;
+  --bg-body: #272b30;
+  --bg-footer: #32383e;
+  --card-text-color: #b3b7b7;
+  --btn-close-color: #c8c9ca;
+}
+.fs-10 {
+  font-size: 0.6563rem;
+}
+.fs-14 {
+  font-size: 0.875rem;
+}
+.bg-free {
+  background-color: var(--free-bg-color);
+}
+.bg-footer {
+  background-color: var(--bg-footer);
+}
+.card-txt-color {
+  color: var(--card-text-color);
+}
+.active-color {
+  color: var(--active-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Comfortaa", serif;
+  color: var(--text-color) !important;
+}
+body {
+  font-family: "Nerko One", cursive;
+  background-color: var(--bg-body);
+}
+/* <!-- ########## Header ########## --> */
+header img {
+  max-height: 200px;
+}
+/* <!-- ########## NavBar ########## --> */
+.game-navbar {
+  background-color: var(--nav-bar-color);
+  z-index: 9999;
+}
+.logo-img {
+  max-width: 40px;
+}
+.navbar-menu-btn:focus {
+  box-shadow: none;
+}
+.game-navbar .navbar-nav a {
+  text-transform: uppercase;
+  color: var(--text-color);
+  transition: color 0.5s;
+}
+.game-navbar .navbar-nav a.active,
+.game-navbar .navbar-nav a:hover {
+  color: var(--active-color);
+}
+@media (min-width: 768px) {
+  .game-navbar {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .game-navbar {
+    width: 80%;
+  }
+}
+/* <!-- ########## gamesSection ########## --> */
+.game-box {
+  filter: grayscale(80%);
+  cursor: pointer;
+  transition: filter 0.5s, transform 0.5s;
+  height: 100%;
+}
+.game-box .card {
+  height: 100%;
+}
+.game-box:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+/* <!-- ########## detailsSection ########## --> */
+
+.btn-close {
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23c8c9ca'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  transition: opacity 0.3s;
+}
+.btn-close:focus {
+  box-shadow: none;
+}
+.details .content-box h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.details .content-box h4 span {
+  font-size: 12px;
+  background-color: var(--active-color);
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+/* <!-- ########## loadingSection ########## --> */
+.loading {
+  background-color: rgb(39 43 48 / 89%);
+  z-index: 999999;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

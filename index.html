@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CRUD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find your favourite game here" />
+    <title>Games</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Comfortaa:wght@300..700&family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!-- ########## gamesSection ########## -->
+    <section class="games" id="gameSection">
+      <!-- ########## Header ########## -->
+      <header>
+        <img
+          class="w-100 object-fit-cover"
+          src="imgs/wraper.png"
+          alt="wraper"
+        />
+      </header>
+      <div class="container">
+        <!-- ########## NavBar ########## -->
+        <nav
+          class="navbar navbar-expand-lg game-navbar px-2 rounded-4 mx-auto position-sticky top-0"
+        >
+          <h5 class="navbar-brand text-uppercase p-0 m-0 fw-medium">
+            <img class="logo-img" src="imgs/logo-sm.png" alt="logo" />
+            Game Reviews
+          </h5>
+          <button
+            class="navbar-toggler navbar-menu-btn border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="text-white fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav ms-auto mb-2 mt-3 mt-lg-0 mb-lg-0"
+              data-target
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="#"
+                  id="mmorpg"
+                  >mmorpg</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="shooter">shooter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="sailing">sailing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="permadeath">permadeath</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="superhero">superhero</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="pixel">pixel</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- ########## Games ########## -->
+        <div class="row gy-4 py-4" id="showMainData"></div>
+      </div>
+    </section>
+    <!-- ########## detailsSection ########## -->
+    <section class="details d-none" id="detailsSection">
+      <div class="container">
+        <header
+          class="details-header d-flex justify-content-between align-items-center py-4"
+        >
+          <h2 class="fs-3">Details Game</h2>
+          <button
+            type="button"
+            class="btn-close"
+            aria-label="Close"
+            id="closeBtn"
+          ></button>
+        </header>
+        <section class="details-body py-3">
+          <div class="row gy-5" id="showDetails">
+            <div class="col-md-4 col-12">
+              <div class="img">
+                <img class="w-100" src="imgs/thumbnail.jpg" alt="thumbnail" />
+              </div>
+            </div>
+            <div class="col-md-8 col-12">
+              <div class="content-box">
+                <h3>Title: <span class="active-color">Tarisland</span></h3>
+                <h4 class="mt-3">
+                  Category: <span class="text-uppercase">mmorpg</span>
+                </h4>
+                <h4>Platform: <span class="">Windows</span></h4>
+                <h4>Status: <span class="">Live</span></h4>
+                <p class="text-white">
+                  Tarisland is a free-to-play cross-platform MMORPG developed by
+                  Level Infinite and Published by Tencent. Available on PC and
+                  mobile devices, the game allows players to easily move between
+                  both, taking the game with them when they can’t be at their
+                  desk. The game is designed to appeal to players of MMOs like
+                  World of Warcraft, offering players nine playable classes and
+                  18 specializations. Each class features an extensive talent
+                  tree system and can be customized. Players of existing MMOs
+                  will be familiar with the standard tank, DPS, and healer
+                  lineup, necessary for the game’s classic raid and dungeon
+                  system. Explore a vast game world and solve mysteries. Pick up
+                  various trades such as gathering, mining, and crafting, and
+                  sell your items on the auction house.
+                </p>
+                <a class="btn btn-outline-warning text-white" href="#"
+                  >Show Game</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- ########## loadingSection ########## -->
+    <section
+      class="loading position-fixed w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center d-none"
+      id="loadingScreen"
+    >
+      <span class="loader"></span>
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Main JS -->
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
