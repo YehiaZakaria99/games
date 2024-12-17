@@ -5,15 +5,15 @@ const links = document.querySelectorAll("[data-target] li a");
 const gameSection = document.getElementById("gameSection");
 const detailsSection = document.getElementById("detailsSection");
 const closeBtn = document.getElementById("closeBtn");
-// Get Class Home 
+// Get Class Home
 import { Home } from "./home.module.js";
-// Get Class Details 
+// Get Class Details
 import { Details } from "./details.module.js";
 
 // Home
 class DisplayHome {
   constructor(homeArr) {
-    this.homeArr = homeArr.filter((e)=> (!(/[gG][oO][dD]/).test(e.title)));
+    this.homeArr = homeArr.filter((e) => !/[gG][oO][dD]/.test(e.title));
   }
   displayHomeData() {
     let tmp = ``;
@@ -123,7 +123,7 @@ async function setDetailsData(id) {
 }
 // Remove class "active" from Links
 function removeActive() {
-  [...links].map(function (a) {
+  links.forEach(function (a) {
     a.classList.remove("active");
   });
 }
