@@ -13,7 +13,7 @@ import { Details } from "./details.module.js";
 // Home
 class DisplayHome {
   constructor(homeArr) {
-    this.homeArr = homeArr;
+    this.homeArr = homeArr.filter((e)=> (!(/[gG][oO][dD]/).test(e.title)));
   }
   displayHomeData() {
     let tmp = ``;

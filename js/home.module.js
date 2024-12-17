@@ -16,7 +16,7 @@ export class Home {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      return result.slice(0, -1);
+      return result;
     } catch (error) {
       console.error(error);
       return error;
